@@ -178,11 +178,80 @@
                         radial-gradient(circle at 70% 70%, rgba(0, 122, 255, 0.05) 0%, transparent 50%);
         }
         
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .math-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.03;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .equation {
+            position: absolute;
+            font-family: 'Times New Roman', serif;
+            font-size: 2rem;
+            color: var(--text-primary);
+            opacity: 0.7;
+        }
+        
+        .equation-1 {
+            top: 15%;
+            left: 10%;
+            font-size: 2.5rem;
+            transform: rotate(-5deg);
+        }
+        
+        .equation-2 {
+            top: 25%;
+            right: 15%;
+            font-size: 2.2rem;
+            transform: rotate(3deg);
+        }
+        
+        .equation-3 {
+            bottom: 30%;
+            left: 5%;
+            font-size: 2.8rem;
+            transform: rotate(-2deg);
+        }
+        
+        .equation-4 {
+            bottom: 20%;
+            right: 10%;
+            font-size: 2.4rem;
+            transform: rotate(4deg);
+        }
+        
+        .equation-5 {
+            top: 40%;
+            left: 20%;
+            font-size: 2.6rem;
+            transform: rotate(-3deg);
+        }
+        
+        .equation-6 {
+            top: 60%;
+            right: 20%;
+            font-size: 2.3rem;
+            transform: rotate(2deg);
+        }
+        
         .hero h2 {
             font-size: 3rem;
             margin-bottom: 1.5rem;
             font-weight: 700;
             line-height: 1.1;
+            position: relative;
+            z-index: 3;
         }
         
         .hero p {
@@ -191,6 +260,8 @@
             margin: 0 auto 2.5rem;
             color: var(--text-secondary);
             font-weight: 400;
+            position: relative;
+            z-index: 3;
         }
         
         .btn {
@@ -209,6 +280,7 @@
             font-size: 1rem;
             position: relative;
             overflow: hidden;
+            z-index: 3;
         }
         
         .btn::after {
@@ -761,6 +833,14 @@
             .btn-outline {
                 margin-left: 0;
             }
+            
+            .equation {
+                font-size: 1.5rem;
+            }
+            
+            .equation-1, .equation-2, .equation-3, .equation-4, .equation-5, .equation-6 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -795,7 +875,16 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
+        <div class="math-background">
+            <div class="equation equation-1">∫ f(x) dx</div>
+            <div class="equation equation-2">∑<sub>n=1</sub><sup>∞</sup> 1/n²</div>
+            <div class="equation equation-3">e<sup>iπ</sup> + 1 = 0</div>
+            <div class="equation equation-4">∇ × E = -∂B/∂t</div>
+            <div class="equation equation-5">F = G(m₁m₂)/r²</div>
+            <div class="equation equation-6">a² + b² = c²</div>
+        </div>
+        
+        <div class="container hero-content">
             <h2>Explore the World of Mathematics</h2>
             <p>Mathletica is a mathematics club for those who seek to embark on a journey with numbers: explore, question, and deeply understand the beauty of mathematics.</p>
             <a href="#about" class="btn">Learn More</a>
